@@ -27,7 +27,7 @@ query_without_join = """
 SELECT location_id, street_address, city, state_province, 
     (SELECT country_name FROM countries WHERE countries.country_id = locations.country_id) AS country_name
 FROM locations
-WHERE country_id = '';
+WHERE country_id = 'CA';
 """
 
 cur.execute(query_without_join)
